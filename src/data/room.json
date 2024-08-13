@@ -1,0 +1,79 @@
+{
+  "room": {
+    "name": "Modern Living Room",
+    "description": "A spacious and well-decorated living room with modern furnishings.",
+    "size": {
+      "width": 20,
+      "depth": 16,
+      "height": 10
+    },
+    "objects": [
+      {
+        "name": "L-Shaped Sofa",
+        "description": "A comfortable L-shaped sofa with plush cushions.",
+        "type": "composite",
+        "components": [
+          {
+            "name": "Sofa Main",
+            "size": { "width": 7, "depth": 3, "height": 3 },
+            "position": { "x": 3, "y": 0, "z": 11 }
+          },
+          {
+            "name": "Sofa Extension",
+            "size": { "width": 3, "depth": 5, "height": 3 },
+            "position": { "x": 10, "y": 0, "z": 9 }
+          }
+        ],
+        "isCloseToWall": true
+      },
+      {
+        "name": "TV",
+        "description": "A 65-inch 4K OLED TV mounted on the wall.",
+        "type": "simple",
+        "size": { "width": 5, "depth": 0.5, "height": 3 },
+        "position": { "x": 7, "y": 3, "z": 0 },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Coffee Table",
+        "description": "A modern glass coffee table.",
+        "type": "simple",
+        "size": { "width": 4, "depth": 2, "height": 1.5 },
+        "position": { "x": 5, "y": 0, "z": 8 },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Bookshelf",
+        "description": "A tall bookshelf filled with books and decorative items.",
+        "type": "simple",
+        "size": { "width": 3, "depth": 1, "height": 8 },
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Armchair",
+        "description": "A cozy armchair for reading.",
+        "type": "simple",
+        "size": { "width": 2.5, "depth": 2.5, "height": 3 },
+        "position": { "x": 16, "y": 0, "z": 12 },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Floor Lamp",
+        "description": "A tall, adjustable floor lamp.",
+        "type": "simple",
+        "size": { "width": 1, "depth": 1, "height": 6 },
+        "position": { "x": 18, "y": 0, "z": 11 },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Area Rug",
+        "description": "A large area rug defining the seating area.",
+        "type": "simple",
+        "size": { "width": 8, "depth": 6, "height": 0.1 },
+        "position": { "x": 3, "y": 0, "z": 5 },
+        "isCloseToWall": false
+      }
+    ]
+  }
+}
