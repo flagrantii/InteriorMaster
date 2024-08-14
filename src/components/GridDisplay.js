@@ -1,8 +1,50 @@
-import React, { useMemo } from 'react';
-import { CELL_SIZE, OBJECT_COLORS } from '../config/config';
+import React, { useState, useMemo } from 'react';
+import { OBJECT_COLORS, MIN_CELL_SIZE, MAX_CELL_SIZE, TARGET_GRID_SIZE } from '../config/config';
+import Grid from './Grid';
+import RoomInfo from './RoomInfo';
+import ObjectList from './ObjectList';
+import SelectedObjectDetails from './SelectedObjectDetails';
+
+const calculateCellSize = (roomWidth, roomDepth) => {
+  const maxDimension = Math.max(roomWidth, roomDepth);
+  let cellSize = Math.floor(TARGET_GRID_SIZE / maxDimension);
+  return Math.max(MIN_CELL_SIZE, Math.min(cellSize, MAX_CELL_SIZE));
+};
+
+const isPositionOccupied = (x, z, objects) => {
+  for (const obj of objects) {
+    if (obj.type === 'simple') {
+      if (
+        x >= obj.position.x * 2 &&
+        x < obj.position.x * 2 + obj.size.width * 2 &&
+        z >= obj.position.z * 2 &&
+        z < obj.position.z * 2 + obj.size.depth * 2
+      ) {
+        return obj;
+      }
+    } else if (obj.type === 'composite') {
+      for (const component of obj.components) {
+        if (
+          x >= component.position.x * 2 &&
+          x < component.position.x * 2 + component.size.width * 2 &&
+          z >= component.position.z * 2 &&
+          z < component.position.z * 2 + component.size.depth * 2
+        ) {
+          return obj;
+        }
+      }
+    }
+  }
+  return null;
+};
 
 export const GridDisplay = ({ room }) => {
   const { size: roomSize, objects } = room;
+  const gridWidth = roomSize.width * 2;
+  const gridDepth = roomSize.depth * 2;
+
+  const [cellSize, setCellSize] = useState(calculateCellSize(gridWidth, gridDepth));
+  const [selectedObject, setSelectedObject] = useState(null);
 
   const objectColorMap = useMemo(() => {
     return objects.reduce((acc, obj, index) => {
@@ -11,128 +53,32 @@ export const GridDisplay = ({ room }) => {
     }, {});
   }, [objects]);
 
-  const isPositionOccupied = (x, z, objects) => {
-    for (const obj of objects) {
-      if (obj.type === 'simple') {
-        if (
-          x >= obj.position.x &&
-          x < obj.position.x + obj.size.width &&
-          z >= obj.position.z &&
-          z < obj.position.z + obj.size.depth
-        ) {
-          return obj;
-        }
-      } else if (obj.type === 'composite') {
-        for (const component of obj.components) {
-          if (
-            x >= component.position.x &&
-            x < component.position.x + component.size.width &&
-            z >= component.position.z &&
-            z < component.position.z + component.size.depth
-          ) {
-            return obj;
-          }
-        }
-      }
-    }
-    return null;
-  };
-
-  const gridItems = Array.from({ length: roomSize.depth + 1 }, (_, z) =>
-    Array.from({ length: roomSize.width + 1 }, (_, x) => {
-      if (z === 0 && x === 0) {
-        return (
-          <div
-            key={`${x}-${z}`}
-            className="bg-gray-200 flex items-center justify-center"
-            style={{
-              width: `${CELL_SIZE}px`,
-              height: `${CELL_SIZE}px`,
-            }}
-          />
-        );
-      }
-      if (z === 0) {
-        return (
-          <div
-            key={`${x}-${z}`}
-            className="bg-gray-200 flex items-center justify-center font-bold text-xs"
-            style={{
-              width: `${CELL_SIZE}px`,
-              height: `${CELL_SIZE}px`,
-            }}
-          >
-            {x - 1}
-          </div>
-        );
-      }
-      if (x === 0) {
-        return (
-          <div
-            key={`${x}-${z}`}
-            className="bg-gray-200 flex items-center justify-center font-bold text-xs"
-            style={{
-              width: `${CELL_SIZE}px`,
-              height: `${CELL_SIZE}px`,
-            }}
-          >
-            {z - 1}
-          </div>
-        );
-      }
-      const obj = isPositionOccupied(x - 1, z - 1, objects);
-      return (
-        <div
-          key={`${x}-${z}`}
-          className={`
-            border border-gray-200
-            flex items-center justify-center
-            transition-all duration-300 ease-in-out
-            hover:shadow-lg hover:z-10 hover:scale-110
-            ${obj ? objectColorMap[obj.name] : 'bg-white'}
-          `}
-          style={{
-            width: `${CELL_SIZE}px`,
-            height: `${CELL_SIZE}px`,
-          }}
-          title={obj ? `${obj.name}: ${obj.description}` : `Empty space (${x - 1}, ${z - 1})`}
-        >
-          {obj && (
-            <span className="text-white font-bold text-sm">
-              {obj.name.charAt(0)}
-            </span>
-          )}
-        </div>
-      );
-    })
-  );
+  const handleCellClick = (x, z) => {
+    const obj = isPositionOccupied(x, z, objects);
+    setSelectedObject(obj || null);
+  }
 
   return (
-    <div className="p-8">
-      <h2 className="text-2xl font-bold mb-4">{room.name}</h2>
-      <p className="mb-4">{room.description}</p>
-      <div
-        className="grid gap-0.5 bg-gray-200 p-0.5 rounded-lg shadow-xl"
-        style={{
-          gridTemplateColumns: `repeat(${roomSize.width + 1}, ${CELL_SIZE}px)`,
-          width: `${(roomSize.width + 1) * CELL_SIZE + roomSize.width * 2}px`,
-        }}
-      >
-        {gridItems.flat()}
+    <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+      <RoomInfo room={room} cellSize={cellSize} setCellSize={setCellSize} />
+      <div className="flex space-x-4">
+        <Grid
+          gridWidth={gridWidth}
+          gridDepth={gridDepth}
+          cellSize={cellSize}
+          objectColorMap={objectColorMap}
+          objects={objects}
+          onCellClick={handleCellClick}
+          selectedObject={selectedObject}
+        />
+        <ObjectList
+          objects={objects}
+          selectedObject={selectedObject}
+          setSelectedObject={setSelectedObject}
+          objectColorMap={objectColorMap}
+        />
       </div>
-      <div className="mt-4 flex flex-wrap gap-4">
-        {objects.map((obj) => (
-          <div key={obj.name} className="flex items-center">
-            <div
-              className={`w-4 h-4 mr-2 ${objectColorMap[obj.name]} rounded`}
-            ></div>
-            <span>{obj.name}</span>
-            {obj.isClosetoWall && (
-              <span className="ml-2 text-xs text-gray-500">(Wall adjacent)</span>
-            )}
-          </div>
-        ))}
-      </div>
+      <SelectedObjectDetails selectedObject={selectedObject} />
     </div>
   );
 };

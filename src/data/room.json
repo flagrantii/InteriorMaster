@@ -1,77 +1,683 @@
 {
   "room": {
-    "name": "Modern Living Room",
-    "description": "A spacious and well-decorated living room with modern furnishings.",
+    "name": "Office Working Space",
+    "description": "A spacious office designed for maximum productivity and comfort.",
     "size": {
       "width": 20,
-      "depth": 16,
-      "height": 10
+      "depth": 20,
+      "height": 4
     },
     "objects": [
       {
-        "name": "L-Shaped Sofa",
-        "description": "A comfortable L-shaped sofa with plush cushions.",
-        "type": "composite",
-        "components": [
-          {
-            "name": "Sofa Main",
-            "size": { "width": 7, "depth": 3, "height": 3 },
-            "position": { "x": 3, "y": 0, "z": 11 }
-          },
-          {
-            "name": "Sofa Extension",
-            "size": { "width": 3, "depth": 5, "height": 3 },
-            "position": { "x": 10, "y": 0, "z": 9 }
-          }
-        ],
+        "name": "Executive Desk",
+        "description": "A large desk with ample space for work and organization.",
+        "type": "simple",
+        "size": {
+          "width": 2.0,
+          "depth": 1.0,
+          "height": 0.75
+        },
+        "position": {
+          "x": 2.0,
+          "y": 2.0,
+          "z": 0
+        },
         "isCloseToWall": true
       },
       {
-        "name": "TV",
-        "description": "A 65-inch 4K OLED TV mounted on the wall.",
+        "name": "Manager's Desk",
+        "description": "A large desk with ample space for the manager's work and meetings.",
         "type": "simple",
-        "size": { "width": 5, "depth": 0.5, "height": 3 },
-        "position": { "x": 7, "y": 3, "z": 0 },
+        "size": {
+          "width": 2.0,
+          "depth": 1.0,
+          "height": 0.75
+        },
+        "position": {
+          "x": 2.0,
+          "y": 5.0,
+          "z": 0
+        },
         "isCloseToWall": true
       },
       {
-        "name": "Coffee Table",
-        "description": "A modern glass coffee table.",
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
         "type": "simple",
-        "size": { "width": 4, "depth": 2, "height": 1.5 },
-        "position": { "x": 5, "y": 0, "z": 8 },
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 4.0,
+          "y": 2.0,
+          "z": 0
+        },
         "isCloseToWall": false
       },
       {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 6.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 8.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 10.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 12.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 14.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 16.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 18.0,
+          "y": 2.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 2.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 4.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 6.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 8.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 10.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 12.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 14.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 16.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Employee Desk",
+        "description": "A standard desk for employee use.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.8,
+          "height": 0.75
+        },
+        "position": {
+          "x": 18.0,
+          "y": 5.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Meeting Table",
+        "description": "A large table for meetings and group discussions.",
+        "type": "simple",
+        "size": {
+          "width": 3.0,
+          "depth": 1.5,
+          "height": 0.75
+        },
+        "position": {
+          "x": 12.0,
+          "y": 10.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Conference Table",
+        "description": "A large table for conferences and presentations.",
+        "type": "simple",
+        "size": {
+          "width": 4.0,
+          "depth": 2.0,
+          "height": 0.75
+        },
+        "position": {
+          "x": 6.0,
+          "y": 12.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Coffee Station",
+        "description": "A space with coffee machines and supplies.",
+        "type": "simple",
+        "size": {
+          "width": 2.0,
+          "depth": 1.5,
+          "height": 0
+        },
+        "position": {
+          "x": 1.0,
+          "y": 16.0,
+          "z": 0
+        },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Snack Bar",
+        "description": "A counter for snacks and light refreshments.",
+        "type": "simple",
+        "size": {
+          "width": 2.0,
+          "depth": 1.0,
+          "height": 0
+        },
+        "position": {
+          "x": 1.0,
+          "y": 13.0,
+          "z": 0
+        },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Break Area",
+        "description": "An area with comfortable seating for breaks and relaxation.",
+        "type": "simple",
+        "size": {
+          "width": 4.0,
+          "depth": 4.0,
+          "height": 0
+        },
+        "position": {
+          "x": 16.0,
+          "y": 16.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Sofa",
+        "description": "Comfortable seating for the break area.",
+        "type": "simple",
+        "size": {
+          "width": 2.0,
+          "depth": 0.8,
+          "height": 0.9
+        },
+        "position": {
+          "x": 16.5,
+          "y": 16.5,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Bean Bag",
+        "description": "Casual seating for relaxation.",
+        "type": "simple",
+        "size": {
+          "width": 1.2,
+          "depth": 1.2,
+          "height": 0.8
+        },
+        "position": {
+          "x": 18.0,
+          "y": 18.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Wall-mounted Shelves",
+        "description": "Shelves for additional storage or display.",
+        "type": "simple",
+        "size": {
+          "width": 2.0,
+          "depth": 0.3,
+          "height": 0.6
+        },
+        "position": {
+          "x": 4.0,
+          "y": 12.0,
+          "z": 1.8
+        },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Whiteboard",
+        "description": "A whiteboard for brainstorming and presentations.",
+        "type": "simple",
+        "size": {
+          "width": 2.0,
+          "depth": 0.1,
+          "height": 1.2
+        },
+        "position": {
+          "x": 8.0,
+          "y": 10.0,
+          "z": 1.0
+        },
+        "isCloseToWall": true
+      },
+      {
+        "name": "TV Screen",
+        "description": "A large screen for presentations and meetings.",
+        "type": "simple",
+        "size": {
+          "width": 1.8,
+          "depth": 0.1,
+          "height": 1.0
+        },
+        "position": {
+          "x": 6.0,
+          "y": 15.0,
+          "z": 1.0
+        },
+        "isCloseToWall": true
+      },
+      {
+        "name": "Printer Station",
+        "description": "A station for printers and office supplies.",
+        "type": "simple",
+        "size": {
+          "width": 1.5,
+          "depth": 0.6,
+          "height": 0.9
+        },
+        "position": {
+          "x": 2.0,
+          "y": 18.0,
+          "z": 0
+        },
+        "isCloseToWall": true
+      },
+      {
         "name": "Bookshelf",
-        "description": "A tall bookshelf filled with books and decorative items.",
+        "description": "Shelves for books and reference materials.",
         "type": "simple",
-        "size": { "width": 3, "depth": 1, "height": 8 },
-        "position": { "x": 0, "y": 0, "z": 0 },
+        "size": {
+          "width": 1.0,
+          "depth": 0.4,
+          "height": 1.8
+        },
+        "position": {
+          "x": 18.0,
+          "y": 10.0,
+          "z": 0
+        },
         "isCloseToWall": true
       },
       {
-        "name": "Armchair",
-        "description": "A cozy armchair for reading.",
+        "name": "Filing Cabinet",
+        "description": "A cabinet for storing documents and files.",
         "type": "simple",
-        "size": { "width": 2.5, "depth": 2.5, "height": 3 },
-        "position": { "x": 16, "y": 0, "z": 12 },
+        "size": {
+          "width": 1.2,
+          "depth": 0.6,
+          "height": 1.2
+        },
+        "position": {
+          "x": 14.0,
+          "y": 16.0,
+          "z": 0
+        },
         "isCloseToWall": true
       },
       {
-        "name": "Floor Lamp",
-        "description": "A tall, adjustable floor lamp.",
+        "name": "Conference Chairs",
+        "description": "Chairs for the conference table.",
         "type": "simple",
-        "size": { "width": 1, "depth": 1, "height": 6 },
-        "position": { "x": 18, "y": 0, "z": 11 },
-        "isCloseToWall": true
+        "size": {
+          "width": 0.6,
+          "depth": 0.6,
+          "height": 1.0
+        },
+        "position": {
+          "x": 6.0,
+          "y": 13.0,
+          "z": 0
+        },
+        "isCloseToWall": false
       },
       {
-        "name": "Area Rug",
-        "description": "A large area rug defining the seating area.",
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
         "type": "simple",
-        "size": { "width": 8, "depth": 6, "height": 0.1 },
-        "position": { "x": 3, "y": 0, "z": 5 },
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 4.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 6.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 8.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 10.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 12.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 14.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 16.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 18.0,
+          "y": 7.0,
+          "z": 0
+        },
+        "isCloseToWall": false
+      },
+      {
+        "name": "Office Chair",
+        "description": "Chairs for employee desks.",
+        "type": "simple",
+        "size": {
+          "width": 0.7,
+          "depth": 0.7,
+          "height": 1.3
+        },
+        "position": {
+          "x": 2.0,
+          "y": 11.0,
+          "z": 0
+        },
         "isCloseToWall": false
       }
     ]
